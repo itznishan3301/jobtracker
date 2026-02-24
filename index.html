@@ -31,6 +31,74 @@
     <!-- ── APP WRAPPER ────────────────────────────── -->
     <div id="app" class="max-w-4xl mx-auto px-4 py-9 pb-16">
 
+      <!-- PAGE TITLE -->
+      <h1 id="page-title" class="text-3xl font-extrabold text-[#1e3a5f] mb-6">
+        Job Application Tracker
+      </h1>
+
+      <!-- ── DASHBOARD SECTION ────────────────────── -->
+      <div id="dashboard-section"
+        class="border-2 border-dashed border-blue-300 rounded-xl p-5 mb-6">
+
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+
+          <!-- Total -->
+          <div class="bg-white border border-gray-200 rounded-xl p-5">
+            <p class="text-sm text-gray-500 mb-2">Total</p>
+            <p id="total-count" class="text-4xl font-bold text-gray-800">8</p>
+          </div>
+
+          <!-- Interview -->
+          <div class="bg-white border border-gray-200 rounded-xl p-5">
+            <p class="text-sm text-gray-500 mb-2">Interview</p>
+            <p id="interview-count" class="text-4xl font-bold text-green-500">0</p>
+          </div>
+
+          <!-- Rejected -->
+          <div class="bg-white border border-gray-200 rounded-xl p-5">
+            <p class="text-sm text-gray-500 mb-2">Rejected</p>
+            <p id="rejected-count" class="text-4xl font-bold text-red-500">0</p>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- DIVIDER -->
+      <hr class="border-t border-gray-200 my-7" />
+
+      <!-- ── AVAILABLE JOBS SECTION ───────────────── -->
+      <div id="jobs-section"
+        class="border-2 border-dashed border-blue-300 rounded-xl p-5">
+
+        <!-- Section header -->
+        <div class="flex justify-between items-center mb-4">
+          <h2 class="text-lg font-bold text-gray-800">Available Jobs</h2>
+          <span id="jobs-count-label" class="text-sm text-gray-500">8 of 8 jobs</span>
+        </div>
+
+        <!-- TABS -->
+        <div class="flex gap-2 mb-5" id="tabs-container">
+          <button id="tab-all"
+            data-tab="all"
+            class="px-4 py-1.5 rounded-md text-sm font-medium bg-blue-600 text-white border-0 cursor-pointer transition-colors duration-150">
+            All
+          </button>
+          <button id="tab-interview"
+            data-tab="interview"
+            class="px-4 py-1.5 rounded-md text-sm font-medium text-gray-600 bg-transparent border-0 cursor-pointer hover:bg-gray-100 transition-colors duration-150">
+            Interview
+          </button>
+          <button id="tab-rejected"
+            data-tab="rejected"
+            class="px-4 py-1.5 rounded-md text-sm font-medium text-gray-600 bg-transparent border-0 cursor-pointer hover:bg-gray-100 transition-colors duration-150">
+            Rejected
+          </button>
+        </div>
+
+        <!-- JOB CARDS CONTAINER -->
+        <div id="jobs-container"></div>
+
+      </div>
     </div>
     <!-- JS -->
     <script src="./js/script.js"></script>
